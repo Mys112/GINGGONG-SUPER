@@ -1,0 +1,43 @@
+-- This script changes the health of all players in the game to infinite and disables damage for them
+
+-- Define some variables
+local Players = game:GetService("Players") -- The service that manages all the players in the game
+
+-- Define some functions
+local function ChangeHealth(player) -- This function changes the health of a given player to infinite
+    local character = player.Character or player.CharacterAdded:Wait() -- The player's character model, or wait for it to spawn if it does not exist yet
+    local humanoid = character:FindFirstChild("Humanoid") -- The humanoid component of the character
+    
+    -- Change the health of the player to infinite
+    humanoid.MaxHealth = math.huge -- Set the maximum health to a very large number, which is effectively infinite
+    humanoid.Health = humanoid.MaxHealth -- Set the current health to the maximum health
+    
+end
+
+local function DisableDamage(player) -- This function disables damage for a given player
+    local character = player.Character or player.CharacterAdded:Wait() -- The player's character model, or wait for it to spawn if it does not exist yet
+    local humanoid = character:FindFirstChild("Humanoid") -- The humanoid component of the character
+    
+    -- Disable damage for the player
+    humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false) -- Disable the dead state, which means the player will not die even if their health reaches zero
+    humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false) -- Disable the falling down state, which means the player will not fall down when they take damage
+    humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false) -- Disable the ragdoll state, which means the player will not go limp when they take damage
+    
+end
+
+-- Connect some events
+Players.PlayerAdded:Connect(function(player) -- When a new player joins the game
+    
+    ChangeHealth(player) -- Change their health to infinite
+    
+    DisableDamage(player) -- Disable damage for them
+    
+end)
+
+for _,player in pairs(Players:GetPlayers()) do -- For each existing player in the game
+    
+    ChangeHealth(player) -- Change their health to infinite
+    
+    DisableDamage(player) -- Disable damage for them
+    
+end
