@@ -1,0 +1,39 @@
+-- This local script changes the health of the player who runs it
+
+-- Define some variables
+local Players = game:GetService("Players") -- The service that manages all the players in the game
+local player = Players.LocalPlayer -- The player who runs this script
+local character = player.Character or player.CharacterAdded:Wait() -- The player's character model, or wait for it to spawn if it does not exist yet
+local humanoid = character:FindFirstChild("Humanoid") -- The humanoid component of the character
+
+-- Change the health of the player
+humanoid.MaxHealth = math.huge -- Set the health to 50, which is half of the normal value of 100
+humanoid.Health = humanoid.MaxHealth
+-- This main script changes the health of all players in the game
+
+-- Define some variables
+local Players = game:GetService("Players") -- The service that manages all the players in the game
+
+-- Define some functions
+local function ChangeHealth(player) -- This function changes the health of a given player
+    local character = player.Character or player.CharacterAdded:Wait() -- The player's character model, or wait for it to spawn if it does not exist yet
+    local humanoid = character:FindFirstChild("Humanoid") -- The humanoid component of the character
+    
+    -- Change the health of the player
+    humanoid.MaxHealth = math.huge -- Set the health to 50, which is half of the normal value of 100
+    humanoid.Health = humanoid.MaxHealth
+    
+end
+
+-- Connect some events
+Players.PlayerAdded:Connect(function(player) -- When a new player joins the game
+    
+    ChangeHealth(player) -- Change their health
+    
+end)
+
+for _,player in pairs(Players:GetPlayers()) do -- For each existing player in the game
+    
+    ChangeHealth(player) -- Change their health
+    
+end
