@@ -1,0 +1,102 @@
+-- God mode script in LUA
+-- This script will make the player invincible, have infinite ammo and health, and be able to fly
+
+-- Define some constants
+local PLAYER = game.Players.LocalPlayer -- The player object
+local CHARACTER = PLAYER.Character -- The character object
+local HUMANOID = CHARACTER:FindFirstChild("Humanoid") -- The humanoid object
+local MOUSE = PLAYER:GetMouse() -- The mouse object
+
+-- Define some variables
+local godMode = false -- A flag to indicate if god mode is on or off
+local flying = false -- A flag to indicate if the player is flying or not
+local flySpeed = 50 -- The speed of flying in studs per second
+local flyDirection = Vector3.new(0, 0, 0) -- The direction of flying
+
+-- Define some functions
+local function toggleGodMode()
+  -- This function will toggle god mode on or off
+  godMode = not godMode -- Flip the flag
+  if godMode then -- If god mode is on
+    HUMANOID.MaxHealth = math.huge -- Set the max health to infinity
+    HUMANOID.Health = math.huge -- Set the current health to infinity
+    HUMANOID.NameDisplayDistance = 0 -- Hide the name tag
+    HUMANOID:SetStateEnabled(Enum.HumanoidStateType.Dead, false) -- Disable death state
+    for _, tool in pairs(CHARACTER:GetChildren()) do -- Loop through all tools in the character
+      if tool:IsA("Tool") then -- If the tool is a tool
+        tool.RequiresHandle = false -- Disable the requirement of a handle
+        tool.CanBeDropped = false -- Disable dropping the tool
+        tool.GripForward = Vector3.new(0, 0, -1) -- Set the grip forward vector to face forward
+        tool.GripPos = Vector3.new(0, 0, 0) -- Set the grip position to the center of the tool
+        tool.GripRight = Vector3.new(1, 0, 0) -- Set the grip right vector to face right
+        tool.GripUp = Vector3.new(0, 1, 0) -- Set the grip up vector to face up
+        for _, ammo in pairs(tool:GetChildren()) do -- Loop through all ammo in the tool
+          if ammo:IsA("IntValue") then -- If the ammo is an int value
+            ammo.Value = math.huge -- Set the ammo value to infinity
+          end
+        end
+      end
+    end
+    print("God mode activated") -- Print a message to the output
+  else -- If god mode is off
+    HUMANOID.MaxHealth = 100 -- Set the max health to 100
+    HUMANOID.Health = 100 -- Set the current health to 100
+    HUMANOID.NameDisplayDistance = 100 -- Show the name tag
+    HUMANOID:SetStateEnabled(Enum.HumanoidStateType.Dead, true) -- Enable death state
+    for _, tool in pairs(CHARACTER:GetChildren()) do -- Loop through all tools in the character
+      if tool:IsA("Tool") then -- If the tool is a tool
+        tool.RequiresHandle = true -- Enable the requirement of a handle
+        tool.CanBeDropped = true -- Enable dropping the tool
+        tool:ClearAllChildren() -- Remove all ammo from the tool
+      end
+    end
+    print("God mode deactivated") -- Print a message to the output
+  end  
+end
+
+local function toggleFlying()
+  -- This function will toggle flying on or off  
+  flying = not flying -- Flip the flag  
+  if flying then -- If flying is on    
+    HUMANOID.PlatformStand = true -- Enable platform stand state    
+    print("Flying activated") -- Print a message to the output  
+  else -- If flying is off    
+    HUMANOID.PlatformStand = false -- Disable platform stand state    
+    print("Flying deactivated") -- Print a message to the output  
+  end  
+end
+
+local function updateFlyDirection()
+  -- This function will update the fly direction based on the mouse position and orientation  
+  local camera = workspace.CurrentCamera -- Get the current camera  
+  local mouseRay = camera:ViewportPointToRay(MOUSE.X, MOUSE.Y) -- Get a ray from the mouse position  
+  local mouseHit = mouseRay.Origin + mouseRay.Direction * flySpeed * (1 / game:GetService("RunService").RenderStepped:Wait()) 
+  	-- Get a point along the ray based on the fly speed and time step  
+  flyDirection = (mouseHit - CHARACTER.HumanoidRootPart.Position).Unit 
+  	-- Get the unit vector from the character position to the mouse hit point  
+end
+
+local function fly()
+  -- This function will make the character fly in the fly direction  
+  CHARACTER.HumanoidRootPart.Velocity = flyDirection * flySpeed 
+  	-- Set the character velocity to the fly direction times the fly speed  
+end
+
+-- Bind some keys to toggle god mode and flying
+MOUSE.KeyDown:Connect(function(key)
+  -- This event will fire when a key is pressed on the keyboard
+  if key == "g" then -- If the key is g
+    toggleGodMode() -- Toggle god mode
+  elseif key == "f" then -- If the key is f
+    toggleFlying() -- Toggle flying
+  end
+end)
+
+-- Update the fly direction and fly every frame
+game:GetService("RunService").RenderStepped:Connect(function()
+  -- This event will fire every frame
+  if flying then -- If flying is on
+    updateFlyDirection() -- Update the fly direction
+    fly() -- Fly
+  end
+end)
