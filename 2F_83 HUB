@@ -26,13 +26,12 @@ MainSection:NewButton("Air Hub", "Hub", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-AirHub-7127"))()
 end)
 
+MainSection:NewButton("Eclipse Hub", "Only Works In PC/Laptop", function()
+    print("Clicked")loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Eclipse-hub-5796"))()
+end)
 
 MainSection:NewButton("Ez Hub", "Works in 150 games", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Ez-Hub_168"))()
-end)
-
-Section:NewButton("Eclipse Hub", "Only Works In PC/Laptop", function()
-    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Eclipse-hub-5796"))()
 end)
 
 -- Open/Close
