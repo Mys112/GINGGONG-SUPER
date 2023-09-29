@@ -22,7 +22,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
-end)
+
 
 MainSection:NewButton("Shizzuru Hub", "I said it has a lot of scripts", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/ggshizuru/myScriptHub/main/ShizzuruHub.1.lua'),true))()
