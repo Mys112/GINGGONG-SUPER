@@ -38,7 +38,7 @@ end)
 local Tab = Window:NewTab("Open/Close")
 local Section = Tab:NewSection("Keybind")
 
-Section:NewKeybind("F to Open/Close", "Open/Close", Enum.KeyCode.F, function()
+Section:NewKeybind("L to Open/Close", "Open/Close", Enum.KeyCode.L, function()
 	Library:ToggleUI()
 end)
 
