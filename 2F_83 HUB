@@ -30,6 +30,10 @@ MainSection:NewButton("Eclipse Hub", "Only Works In PC/Laptop", function()
     print("Clicked")loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Eclipse-hub-5796"))()
 end)
 
+MainSection:NewButton("Ez Hub", "Works in 150 games", function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Ez-Hub_168"))()
+end)
+
 -- Open/Close
 local Tab = Window:NewTab("Open/Close")
 local Section = Tab:NewSection("Keybind")
