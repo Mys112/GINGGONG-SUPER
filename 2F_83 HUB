@@ -16,14 +16,7 @@ end)
 
 MainSection:NewButton("Auto Admin", "only works in some admin game", function()
        game.Players.LocalPlayer.Character.HumanoidRootPart.Position=game.Workspace.RankGiverPads.Model.TouchPart.Position+Vector3.new(0,0,0)
-wait (0.1)
-local args = {
-    [1] = ";refresh "
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
 end)
-
 MainSection:NewButton("Shizzuru Hub", "I said it has a lot of scripts", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/ggshizuru/myScriptHub/main/ShizzuruHub.1.lua'),true))()
 end)
