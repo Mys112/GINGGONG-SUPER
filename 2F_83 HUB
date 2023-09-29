@@ -15,7 +15,7 @@ MainSection:NewButton("Ghost Hub", "so many script inside it", function()
 end)
 
 MainSection:NewButton("Auto Admin", "only works in some admin game", function()
-       game.Players.LocalPlayer.Character.HumanoidRootPart.Position=game.Workspace.RankGiverPads.Model.TouchPart.Position+Vector3.new(0,0,0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Position=game.Workspace.RankGiverPads.Model.TouchPart.Position+Vector3.new(0,0,0)
 end)
 MainSection:NewButton("Shizzuru Hub", "I said it has a lot of scripts", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/ggshizuru/myScriptHub/main/ShizzuruHub.1.lua'),true))()
