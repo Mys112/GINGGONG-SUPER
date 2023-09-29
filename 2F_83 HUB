@@ -16,7 +16,7 @@ end)
 
 MainSection:NewButton("Auto Admin", "only works in some admin game", function()
      game.Players.LocalPlayer.Character.HumanoidRootPart.Position=game.Workspace.RankGiverPads.Model.TouchPart.Position+Vector3.new(0,0,0)
-wait ()
+wait (0.1)
 local args = {
     [1] = ";refresh "
 }
