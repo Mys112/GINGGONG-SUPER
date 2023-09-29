@@ -120,3 +120,7 @@ end)
 MainSection:NewButton("Keyboard Mobile/Android", "For phones", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end)
+
+MainSection:NewButton("RTX Gui", "4k And Shaders", function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-rtx-7593"))()
+end)
