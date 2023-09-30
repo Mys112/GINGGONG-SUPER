@@ -33,6 +33,11 @@ MainSection:NewButton("Ez Hub", "Works in 150 games", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Ez-Hub_168"))()
 end)
 
+MainSection:NewButton("CMD-X", "Another Admins", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+
+
 -- Open/Close
 local Tab = Window:NewTab("Open/Close")
 local Section = Tab:NewSection("Keybind")
