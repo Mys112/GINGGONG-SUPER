@@ -129,7 +129,7 @@ MainSection:NewButton("Chat Bypasser","Bypass toxic chat", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-MOBILE-Overall-Chat-Bypasser-7978"))()
 end)
 
-MainSection:NewButton("CMD X","another admins", function()
+MainSection:NewButton("Commands X","another admins", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
 end)
 
