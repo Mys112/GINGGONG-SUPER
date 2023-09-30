@@ -132,5 +132,10 @@ end)
 local Main = Window:NewTab("Games")
 local MainSection = Main:NewSection("Games")
 
+Section:NewButton("Break In 2 Pertama", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))()
+end)
 
- 
+Section:NewButton("Break In 2 Kedua", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://freenote.biz/raw/80jXm2Q0a7",true))()
+end)
