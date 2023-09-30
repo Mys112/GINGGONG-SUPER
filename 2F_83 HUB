@@ -124,13 +124,8 @@ MainSection:NewButton("RTX Gui", "4k And Shaders", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-rtx-7593"))()
 end)
 
-MainSection:NewButton("ChatBypasser","Bypass toxic chat", function()
+MainSection:NewButton("Chat Bypasser","Bypass toxic chat", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-MOBILE-Overall-Chat-Bypasser-7978"))()
 end)
 
--- Games
-
-local MainSection = Main:Section("Games")
-
-
- 
+--  GIMANA MAU LIAT LOL ADA WINDOWS KOSONG
