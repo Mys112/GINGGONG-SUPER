@@ -129,5 +129,5 @@ MainSection:NewButton("Chat Bypasser","Bypass toxic chat", function()
 end)
 
 -- Games (GIMANA MAU LIAT LOL ADA WINDOWS KOSONG) 
+local Main = Window:NewTab("Games")
 
-local MainSection = Main:NewSection("Games")
