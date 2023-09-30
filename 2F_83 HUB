@@ -157,7 +157,7 @@ MainSection:NewButton("Sword Simulator/Weapon simulator 1", "PrisonLife script",
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AlznX/Roblox-Scripts/main/Sword%20Simulator%20Hub"))()
 end)
  
-MainSection:NewButton("Sword Master Season 21", "Version 5, function()
+MainSection:NewButton("Sword Master Season 21", "Version 5", function()
     loadstring(game:HttpGet("https://bitbucket.org/tnightmareha/weapon-masters/raw/8e013a29d46eae76f5eb1440e7e6cdb8f1c0984e/SourceV5.lua"))()
 end)
  
