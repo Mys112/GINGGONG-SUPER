@@ -133,6 +133,10 @@ MainSection:NewButton("Commands X","another admins", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
 end)
 
+MainSection:NewButton("Free cam for android","another admins", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/CameraSpy/main/Script", true))()
+end)
+
 -- Games (GIMANA MAU LIAT LOL ADA WINDOWS KOSONG) 
 local Main = Window:NewTab("Games")
 local MainSection = Main:NewSection("Games")
