@@ -127,3 +127,4 @@ end)
 MainSection:NewButton("ChatBypasser","Bypass toxic chat", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-MOBILE-Overall-Chat-Bypasser-7978"))()
 end)
+ 
