@@ -148,4 +148,8 @@ end)
 MainSection:NewButton("Prison Life", "PrisonLife script", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Script'))()
 end)
+
+MainSection:NewButton("Sword Simulator/Weapon simulator 1", "PrisonLife script", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AlznX/Roblox-Scripts/main/Sword%20Simulator%20Hub"))()
+end)
  
