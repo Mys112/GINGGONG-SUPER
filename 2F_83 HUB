@@ -34,6 +34,25 @@ MainSection:NewButton("Ez Hub", "Works in 150 games", function()
 end)
 
 MainSection:NewButton("CMD-X", "Another Admins", function()
+    --[[----------------------------------------------------------------
+|                ▄▀▄▄▄▄   ▄▀▀▄ ▄▀▄  ▄▀▀█▄▄   ▄▀▀▄  ▄▀▄             |
+|               █ █    ▌ █  █ ▀  █ █ ▄▀   █ █    █   █             |
+|              ▐ █      ▐  █    █ ▐ █    █ ▐     ▀▄▀               |
+|                █        █    █    █    █      ▄▀ █               |
+|               ▄▀▄▄▄▄▀ ▄▀   ▄▀    ▄▀▄▄▄▄▀     █  ▄▀               |
+|              █     ▐  █    █    █     ▐    ▄▀  ▄▀                |
+|              ▐        ▐    ▐    ▐         █    ▐                 |
+|               ▐        ▐    ▐    ▐         █    ▐                |
+|------------------------------------------------------------------|
+|    Credits:    | Binds & Info:                                   |
+|    pigeon#8951 | U                         Open and close output |
+|      fini#7057 | RShift                          Fill suggestion |
+|     adam.#0004 | ;                               Focus on CMDBar |
+| -------------- | Q                                Open and close |
+|                | LShift+Bksp                        Clear CMDbar |
+|                |                                                 |
+|                | .cmds                             List commands |
+----------------------------------------------------------------]]--
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
 end)
 
