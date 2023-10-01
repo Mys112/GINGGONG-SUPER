@@ -34,6 +34,8 @@ MainSection:NewButton("Ez Hub", "Works in 150 games", function()
 end)
 
 MainSection:NewButton("Demon Hub", "Works in 999 games", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mys112/GINGGONG-SUPER/main/Demon%20Hub%20RAW"))()
+end)
 
 
 -- Open/Close
