@@ -33,6 +33,8 @@ MainSection:NewButton("Ez Hub", "Works in 150 games", function()
     loadstring(game:HttpGet("https://scriptblox.com/raw/Ez-Hub_168"))()
 end)
 
+MainSection:NewButton("Demon Hub", "Works in 999 games", function()
+
 
 -- Open/Close
 local Tab = Window:NewTab("Open/Close")
