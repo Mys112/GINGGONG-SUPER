@@ -6,7 +6,7 @@ local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
 
-MainSection:NewButton("Infinite Yield Fe  [working]", "An OP Admin Script", function()
+MainSection:NewButton("Infinite Yield Fe", "An OP Admin Script", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
