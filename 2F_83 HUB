@@ -173,3 +173,4 @@ MainSection:NewButton("Troll cart ride/TCR", "TCR SCRIPT", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/WinterDinder/TFO-Cart-Edition/main/Main", true))()
 end
 
+ 
