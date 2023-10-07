@@ -174,3 +174,6 @@ MainSection:NewButton("Troll cart ride/TCR", "TCR SCRIPT", function()
 end)
 
  
+MainSection:NewButton("Troll cart ride/TCR", "TCR SCRIPT", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/stillnotgivingafuck/LuckyBlocks/main/loader.lua')))()
+end)
