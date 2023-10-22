@@ -112,3 +112,21 @@ Section:NewButton("Jail All", "CRIMINALS!", function()
 game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
 
 end)
+
+Section:NewButton("Ice All", "🥶🥶🥶", function()
+    local args = {
+    [1] = ";ice others"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Night", "this is FE", function()
+    local args = {
+    [1] = ";time 0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
