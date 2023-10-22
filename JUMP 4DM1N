@@ -1,0 +1,54 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Commands Hub OP", "Synapse")
+
+local Tab = Window:NewTab("Commands [Defends]")
+
+local Section = Tab:NewSection("Require [Admin]")
+
+Section:NewLabel("Prefix Require [;]")
+
+Section:NewButton("Unmute", "Opens you chat menu", function()
+    local args = {
+    [1] = ";unmute"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Refresh", "Refressed your avatar [anti loopkill]", function()
+    local args = {
+    [1] = ";refresh"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Anti Fogend", "Yeah that's it", function()
+    local args = {
+    [1] = ";fogend inf"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Unjail", "incase you’re in jail", function()
+    local args = {
+    [1] = ";unjail"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Unice", "no 🥶", function()
+    local args = {
+    [1] = ";unice"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
