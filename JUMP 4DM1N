@@ -131,7 +131,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild(
 
 end)
 
-Section:NewButton("Loopkill All", "lol keep dying", function()
+Section:NewButton("Loopkill others", "lol keep dying", function()
     local args = {
     [1] = ";loopkill others"
 }
@@ -140,7 +140,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild(
 
 end)
 
-Section:NewButton("Kill All", "Ez", function()
+Section:NewButton("Kill others", "Ez", function()
     local args = {
     [1] = ";kill all"
 }
