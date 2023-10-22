@@ -52,3 +52,63 @@ Section:NewButton("Unice", "no 🥶", function()
 game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
 
 end)
+
+Section:NewButton("Unblur", "you can see now", function()
+    local args = {
+    [1] = ";unblur"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+local Tab = Window:NewTab("Commands [Attacks]")
+
+local Section = Tab:NewSection("Require [Admin]")
+
+Section:NewLabel("Prefix Require [;]")
+
+Section:NewButton("Countdown2 Inf", "Blank Loop", function()
+    local args = {
+    [1] = ";countdown2 inf"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Fogend 0", "Blind People", function()
+    local args = {
+    [1] = ";fogend 0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Mute All", "so they can't talk", function()
+    local args = {
+    [1] = ";mute others"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Blur All", "they all can't see much", function()
+    local args = {
+    [1] = ";blur others inf"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Jail All", "CRIMINALS!", function()
+    local args = {
+    [1] = ";jail others"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
