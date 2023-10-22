@@ -62,15 +62,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild(
 
 end)
 
-Section:NewButton("Day", "this is FE", function()
-    local args = {
-    [1] = ";time 12"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
-
-end)
-
 local Tab = Window:NewTab("Commands [Attacks]")
 
 local Section = Tab:NewSection("Require [Admin]")
@@ -134,6 +125,24 @@ end)
 Section:NewButton("Night", "this is FE", function()
     local args = {
     [1] = ";time 0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Loopkill All", "lol keep dying", function()
+    local args = {
+    [1] = ";loopkill others"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Kill All", "Ez", function()
+    local args = {
+    [1] = ";kill all"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
