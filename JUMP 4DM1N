@@ -62,6 +62,15 @@ game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild(
 
 end)
 
+Section:NewButton("Day", "this is FE", function()
+    local args = {
+    [1] = ";time 12"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
 local Tab = Window:NewTab("Commands [Attacks]")
 
 local Section = Tab:NewSection("Require [Admin]")
